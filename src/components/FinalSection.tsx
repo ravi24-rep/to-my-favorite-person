@@ -156,7 +156,7 @@ export function FinalSection() {
               <>
                 <div className="w-full aspect-[4/5] bg-white rounded-xl shadow-2xl overflow-hidden p-4 rotate-2 border border-pink-100/50">
                   <img 
-                    src="/favorite_photo.png" 
+                    src="./favorite_photo.png" 
                     alt="Our Favorite Photo" 
                     className="w-full h-full object-cover rounded-lg shadow-inner"
                   />

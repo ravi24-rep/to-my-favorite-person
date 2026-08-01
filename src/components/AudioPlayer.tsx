@@ -120,7 +120,7 @@ export function AudioPlayer() {
                 className="w-10 h-10 rounded-lg bg-gradient-to-tr from-pink-500 to-rose-500 shadow-sm flex items-center justify-center relative overflow-hidden border border-white/10 flex-shrink-0"
               >
                 <img 
-                  src="/favorite_photo.png" 
+                  src="./favorite_photo.png" 
                   alt="Our Story" 
                   className="w-full h-full object-cover opacity-70"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}

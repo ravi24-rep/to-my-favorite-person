@@ -14,7 +14,7 @@ interface Memory {
 const memories: Memory[] = [
   {
     id: 1,
-    url: "/first_meet.png",
+    url: "./first_meet.png",
     date: "First Chapter",
     title: "The Beginning",
     caption: "The day I realized how incredibly lucky I am to have found you in this vast world.",
@@ -22,7 +22,7 @@ const memories: Memory[] = [
   },
   {
     id: 2,
-    url: "/gallery1.jpg",
+    url: "./gallery1.jpg",
     date: "Sweet Smiles",
     title: "Our Selfie",
     caption: "Your smile is my favorite view in the entire universe. It lights up my whole world.",
@@ -30,7 +30,7 @@ const memories: Memory[] = [
   },
   {
     id: 3,
-    url: "/gallery2.jpg",
+    url: "./gallery2.jpg",
     date: "Hand in Hand",
     title: "Holding Hands",
     caption: "Holding your hand makes me feel safe, happy, and complete wherever we go.",
@@ -38,7 +38,7 @@ const memories: Memory[] = [
   },
   {
     id: 4,
-    url: "/gallery3.jpg",
+    url: "./gallery3.jpg",
     date: "Cozy Travel",
     title: "Sweet Kiss",
     caption: "Even the longest train journeys feel like a dream when I am holding you close.",
@@ -46,7 +46,7 @@ const memories: Memory[] = [
   },
   {
     id: 5,
-    url: "/gallery4.jpg",
+    url: "./gallery4.jpg",
     date: "Timeless Connection",
     title: "Together Forever",
     caption: "A timeless connection that grows stronger and deeper with every passing second.",
@@ -54,7 +54,7 @@ const memories: Memory[] = [
   },
   {
     id: 6,
-    url: "/gallery5.jpg",
+    url: "./gallery5.jpg",
     date: "Pure Magic",
     title: "Loving Hug",
     caption: "Every warm embrace and sweet kiss from you melts all my worries away.",
