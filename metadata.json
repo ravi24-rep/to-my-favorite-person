@@ -1,0 +1,6 @@
+{
+  "name": "To My Favorite Person",
+  "description": "An interactive romantic story and greeting for Girlfriend's Day.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
