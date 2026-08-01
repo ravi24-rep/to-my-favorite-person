@@ -22,9 +22,7 @@ export function AudioPlayer() {
 
   // Initialize Audio
   useEffect(() => {
-    // 👇 TO USE YOUR OWN SONG: Place your .mp3 file in the /public folder
-    //    and change the path below. For example: '/our-song.mp3'
-    const audio = new Audio('/our-song.mp3');
+    const audio = new Audio('./our-song.mp3');
     audio.loop = true;
     setAudioEl(audio);
 
@@ -37,8 +35,6 @@ export function AudioPlayer() {
   useEffect(() => {
     let timer: ReturnType<typeof setInterval>;
     if (isPlaying) {
-      audioEl?.play().catch(() => {});
-
       timer = setInterval(() => {
         setCurrentTime((prev) => {
           const next = prev >= duration ? 0 : prev + 1;
@@ -46,11 +42,9 @@ export function AudioPlayer() {
           return next;
         });
       }, 1000);
-    } else {
-      audioEl?.pause();
     }
     return () => clearInterval(timer);
-  }, [isPlaying, audioEl]);
+  }, [isPlaying]);
 
   // Find active lyric
   useEffect(() => {
@@ -66,7 +60,19 @@ export function AudioPlayer() {
     return `${mins}:${rem < 10 ? '0' : ''}${rem}`;
   };
 
-  const togglePlay = () => setIsPlaying(!isPlaying);
+  const togglePlay = () => {
+    if (!audioEl) return;
+    if (isPlaying) {
+      audioEl.pause();
+      setIsPlaying(false);
+    } else {
+      audioEl.play().then(() => {
+        setIsPlaying(true);
+      }).catch((err) => {
+        console.error("Audio play blocked or failed:", err);
+      });
+    }
+  };
 
   return (
     <motion.div
